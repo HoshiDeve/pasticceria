@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasticceria Dolce Vita - Dolci artigianali dal 1985</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Design System */
+        :root {
+          /* Primitive Color Tokens */
+          --color-white: rgba(255, 255, 255, 1);
+          --color-black: rgba(0, 0, 0, 1);
+          --color-cream-50: rgba(252, 252, 249, 1);
+          --color-cream-100: rgba(255, 255, 253, 1);
+          --color-gray-200: rgba(245, 245, 245, 1);
+          --color-gray-300: rgba(167, 169, 169, 1);
+          --color-gray-400: rgba(119, 124, 124, 1);
+          --color-slate-500: rgba(98, 108, 113, 1);
+          --color-brown-600: rgba(94, 82, 64, 1);
+          --color-charcoal-700: rgba(31, 33, 33, 1);
+          --color-charcoal-800: rgba(38, 40, 40, 1);
+          --color-slate-900: rgba(19, 52, 59, 1);
+          --color-teal-300: rgba(50, 184, 198, 1);
+          --color-teal-400: rgba(45, 166, 178, 1);
+          --color-teal-500: rgba(33, 128, 141, 1);
+          --color-teal-600: rgba(29, 116, 128, 1);
+          --color-teal-700: rgba(26, 104, 115, 1);
+          --color-teal-800: rgba(41, 150, 161, 1);
+          --color-red-400: rgba(255, 84, 89, 1);
+          --color-red-500: rgba(192, 21, 47, 1);
+          --color-orange-400: rgba(230, 129, 97, 1);
+          --color-orange-500: rgba(168, 75, 47, 1);
+
+          /* RGB versions for opacity control */
+          --color-brown-600-rgb: 94, 82, 64;
+          --color-teal-500-rgb: 33, 128, 141;
+          --color-slate-900-rgb: 19, 52, 59;
+          --color-slate-500-rgb: 98, 108, 113;
+          --color-red-500-rgb: 192, 21, 47;
+          --color-red-400-rgb: 255, 84, 89;
+          --color-orange-500-rgb: 168, 75, 47;
+          --color-orange-400-rgb: 230, 129, 97;
+
+          /* Background color tokens (Light Mode) */
+          --color-bg-1: rgba(59, 130, 246, 0.08);
+          --color-bg-2: rgba(245, 158, 11, 0.08);
+          --color-bg-3: rgba(34, 197, 94, 0.08);
+          --color-bg-4: rgba(239, 68, 68, 0.08);
+          --color-bg-5: rgba(147, 51, 234, 0.08);
+          --color-bg-6: rgba(249, 115, 22, 0.08);
+          --color-bg-7: rgba(236, 72, 153, 0.08);
+          --color-bg-8: rgba(6, 182, 212, 0.08);
+
+          /* Custom Bakery Colors */
+          --bakery-cream: #F5F0EB;
+          --bakery-brown: #8B6F47;
+          --bakery-gold: #D4AF37;
+          --bakery-text: #333333;
+          --bakery-light-brown: rgba(139, 111, 71, 0.1);
+          --bakery-gold-light: rgba(212, 175, 55, 0.2);
+
+          /* Semantic Color Tokens */
+          --color-background: var(--bakery-cream);
+          --color-surface: var(--color-cream-100);
+          --color-text: var(--bakery-text);
+          --color-text-secondary: var(--color-slate-500);
+          --color-primary: var(--bakery-gold);
+          --color-primary-hover: #C19B26;
+          --color-primary-active: #A8841D;
+          --color-secondary: var(--bakery-light-brown);
+          --color-secondary-hover: rgba(139, 111, 71, 0.2);
+          --color-secondary-active: rgba(139, 111, 71, 0.25);
+          --color-border: rgba(139, 111, 71, 0.3);
+          --color-btn-primary-text: var(--color-white);
+          --color-card-border: rgba(139, 111, 71, 0.2);
+          --color-card-border-inner: rgba(139, 111, 71, 0.12);
+
+          /* Typography */
+          --font-family-serif: "Playfair Display", "Times New Roman", serif;
+          --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          --font-size-xs: 11px;
+          --font-size-sm: 12px;
+          --font-size-base: 14px;
+          --font-size-md: 14px;
+          --font-size-lg: 16px;
+          --font-size-xl: 18px;
+          --font-size-2xl: 20px;
+          --font-size-3xl: 24px;
+          --font-size-4xl: 30px;
+          --font-size-5xl: 36px;
+          --font-size-6xl: 48px;
+          --font-weight-normal: 400;
+          --font-weight-medium: 500;
+          --font-weight-semibold: 600;
+          --font-weight-bold: 700;
+          --line-height-tight: 1.2;
+          --line-height-normal: 1.5;
+          --letter-spacing-tight: -0.01em;
+
+          /* Spacing */
+          --space-0: 0;
+          --space-1: 1px;
+          --space-2: 2px;
+          --space-4: 4px;
+          --space-6: 6px;
+          --space-8: 8px;
+          --space-10: 10px;
+          --space-12: 12px;
+          --space-16: 16px;
+          --space-20: 20px;
+          --space-24: 24px;
+          --space-32: 32px;
+          --space-40: 40px;
+          --space-48: 48px;
+          --space-64: 64px;
+          --space-80: 80px;
+
+          /* Border Radius */
+          --radius-sm: 6px;
+          --radius-base: 8px;
+          --radius-md: 10px;
+          --radius-lg: 12px;
+          --radius-full: 9999px;
+
+          /* Shadows */
+          --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+          --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+          /* Animation */
+          --duration-fast: 150ms;
+          --duration-normal: 250ms;
+          --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+          /* Layout */
+          --container-sm: 640px;
+          --container-md: 768px;
+          --container-lg: 1024px;
+          --container-xl: 1280px;
+        }
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--font-size-base);
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            line-height: var(--line-height-normal);
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-family-serif);
+            font-weight: var(--font-weight-bold);
+            line-height: var(--line-height-tight);
+            letter-spacing: var(--letter-spacing-tight);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(245, 240, 235, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .navbar.scrolled {
+            background: rgba(245, 240, 235, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: var(--space-16) var(--space-20);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: var(--font-family-serif);
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--bakery-brown);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-32);
+        }
+
+        .nav-link {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            transition: color var(--duration-fast) var(--ease-standard);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--bakery-brown);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--bakery-gold);
+            transition: width var(--duration-normal) var(--ease-standard);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            color: var(--bakery-brown);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .nav-phone svg {
+            color: var(--bakery-brown);
+        }
+
+        /* Mobile menu toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--bakery-brown);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('https://images.unsplash.com/photo-1555507036-ab1f4038808a') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: var(--space-20);
+        }
+
+        .hero h1 {
+            font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-6xl));
+            margin-bottom: var(--space-16);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-32);
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-16);
+            margin-bottom: var(--space-32);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: var(--space-16) var(--space-32);
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-lg);
+            transition: all var(--duration-normal) var(--ease-standard);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid transparent;
+        }
+
+        .cta-button.primary {
+            background: var(--bakery-gold);
+            color: white;
+        }
+
+        .cta-button.primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--bakery-brown);
+            transform: translateY(-2px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            color: white;
+            opacity: 0.8;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--space-80) var(--space-20);
+        }
+
+        .container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: var(--font-size-4xl);
+            text-align: center;
+            margin-bottom: var(--space-48);
+            color: var(--bakery-brown);
+        }
+
+        /* Chi Siamo Section */
+        .chi-siamo {
+            background: var(--color-surface);
+        }
+
+        .chi-siamo-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-64);
+            align-items: center;
+        }
+
+        .chi-siamo-text .intro-text {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-medium);
+            color: var(--bakery-brown);
+            margin-bottom: var(--space-32);
+            line-height: 1.6;
+        }
+
+        .chi-siamo-text p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-24);
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-20);
+            margin-top: var(--space-40);
+        }
+
+        .highlight-box {
+            background: white;
+            padding: var(--space-24);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 2px solid var(--bakery-gold);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-icon {
+            margin-bottom: var(--space-12);
+            color: var(--bakery-gold);
+        }
+
+        .highlight-box h4 {
+            color: var(--bakery-gold);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-8);
+        }
+
+        .highlight-box p {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            margin: 0;
+        }
+
+        .chi-siamo-image {
+            position: relative;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Menu Section */
+        .menu {
+            background: var(--color-background);
+        }
+
+        .menu-categories {
+            display: grid;
+            gap: var(--space-48);
+        }
+
+        .menu-category {
+            background: var(--color-surface);
+            border-radius: var(--radius-lg);
+            padding: var(--space-32);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-card-border);
+        }
+
+        .category-title {
+            font-size: var(--font-size-3xl);
+            color: var(--bakery-brown);
+            margin-bottom: var(--space-24);
+            text-align: center;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-20);
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: var(--radius-base);
+            padding: var(--space-20);
+            border: 1px solid var(--color-card-border);
+            transition: all var(--duration-normal) var(--ease-standard);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--bakery-gold);
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--bakery-gold);
+            transform: scaleY(0);
+            transition: transform var(--duration-normal) var(--ease-standard);
+        }
+
+        .menu-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .item-name {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            color: var(--bakery-brown);
+            margin-bottom: var(--space-8);
+        }
+
+        .item-price {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--bakery-gold);
+        }
+
+        .category-banner {
+            margin-bottom: var(--space-32);
+            text-align: center;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .item-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-12);
+            transition: transform var(--duration-normal) var(--ease-standard);
+        }
+
+        .menu-item:hover .item-image {
+            transform: scale(1.05);
+        }
+
+        .item-description {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-8);
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--color-surface);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-40);
+            margin-top: var(--space-32);
+        }
+
+        .contact-card {
+            background: white;
+            padding: var(--space-32);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid var(--color-card-border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bakery-gold-light);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-16);
+            color: var(--bakery-brown);
+        }
+
+        .contact-info-simple {
+            grid-column: span 2;
+            background: white;
+            padding: var(--space-32);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-card-border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-title {
+            font-size: var(--font-size-xl);
+            color: var(--bakery-brown);
+            margin-bottom: var(--space-12);
+        }
+
+        .contact-info {
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: var(--space-16);
+            padding: var(--space-10) var(--space-20);
+            background: var(--bakery-brown);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-base);
+            font-weight: var(--font-weight-medium);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .contact-button:hover {
+            background: #7A6240;
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bakery-brown);
+            color: white;
+            padding: var(--space-48) var(--space-20) var(--space-24);
+        }
+
+        .footer-content {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-32);
+        }
+
+        .footer-section h3 {
+            margin-bottom: var(--space-16);
+            color: var(--bakery-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color var(--duration-fast) var(--ease-standard);
+        }
+
+        .footer-links a:hover {
+            color: var(--bakery-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-16);
+            margin-top: var(--space-16);
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .social-link:hover {
+            background: var(--bakery-gold);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            margin-top: var(--space-32);
+            padding-top: var(--space-24);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(245, 240, 235, 0.98);
+                flex-direction: column;
+                padding: var(--space-20);
+                border-top: 1px solid var(--color-border);
+                gap: var(--space-16);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: var(--font-size-4xl);
+            }
+
+            .section {
+                padding: var(--space-48) var(--space-16);
+            }
+
+            .section-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: var(--space-20);
+            right: var(--space-20);
+            width: 50px;
+            height: 50px;
+            background: var(--bakery-gold);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--color-background);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-32);
+            margin-top: var(--space-40);
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: var(--space-32);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-card-border);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: var(--space-16);
+        }
+
+        .testimonial-text {
+            font-size: var(--font-size-lg);
+            line-height: 1.6;
+            margin-bottom: var(--space-24);
+            font-style: italic;
+            color: var(--color-text-secondary);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-12);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--bakery-gold-light);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bakery-brown);
+        }
+
+        .author-name {
+            font-weight: var(--font-weight-semibold);
+            color: var(--bakery-brown);
+        }
+
+        /* Instagram Feed Section */
+        .instagram-feed {
+            background: var(--color-surface);
+        }
+
+        .instagram-subtitle {
+            text-align: center;
+            font-size: var(--font-size-xl);
+            color: var(--bakery-gold);
+            margin-bottom: var(--space-32);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-16);
+            margin-bottom: var(--space-40);
+        }
+
+        .instagram-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-base);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .instagram-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .instagram-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform var(--duration-normal) var(--ease-standard);
+        }
+
+        .instagram-item:hover .instagram-image {
+            transform: scale(1.1);
+        }
+
+        .instagram-cta {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--space-12) var(--space-24);
+            border-radius: var(--radius-base);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .btn--primary {
+            background: var(--bakery-gold);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">Dolce Vita</a>
+            <div class="nav-phone">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span class="phone-number">+39 090 123456</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#contatti" class="nav-link">Contatti</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Pasticceria Dolce Vita</h1>
+            <p class="tagline">Dolci artigianali dal 1985</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="cta-button primary">Scopri il Menu</a>
+                <a href="#contatti" class="cta-button secondary">Contattaci</a>
+            </div>
+            <div class="scroll-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l3 3 7-7"/>
+                    <path d="M12 3v15"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section class="section chi-siamo" id="chi-siamo">
+        <div class="container">
+            <h2 class="section-title">La Nostra Storia</h2>
+            <div class="chi-siamo-content">
+                <div class="chi-siamo-text">
+                    <p class="intro-text">Dal 1985 la Pasticceria Dolce Vita è sinonimo di eccellenza nella tradizione dolciaria messinese. Ogni giorno, con passione e dedizione, realizziamo dolci artigianali seguendo le ricette tramandate di generazione in generazione.</p>
+                    <p>Selezioniamo con cura materie prime di altissima qualità: mandorle siciliane, cioccolato pregiato, burro fresco e ricotta di giornata. Il nostro laboratorio è il cuore pulsante dove maestri pasticceri trasformano questi ingredienti in vere opere d'arte.</p>
+                    <p>Dalla colazione con i nostri cornetti fragranti alle torte eleganti per le vostre occasioni speciali, ogni creazione porta con sé l'amore per la tradizione e l'innovazione del gusto.</p>
+                    
+                    <div class="highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <h4>Dal 1985</h4>
+                            <p>Tradizione familiare</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                                    <path d="M12 2L9.5 8.5L2 9.5L9.5 10.5L12 17L14.5 10.5L22 9.5L14.5 8.5L12 2Z"/>
+                                </svg>
+                            </div>
+                            <h4>Ingredienti Selezionati</h4>
+                            <p>Solo il meglio della Sicilia</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2v20"/>
+                                    <path d="M18 2v20"/>
+                                    <path d="M6 2c0 4 6 4 6 8s-6 4-6 8"/>
+                                    <path d="M18 2c0 4-6 4-6 8s6 4 6 8"/>
+                                </svg>
+                            </div>
+                            <h4>Ricette Tradizionali</h4>
+                            <p>Tramandate di generazione</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chi-siamo-image">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136" alt="Maestro pasticcere al lavoro" class="story-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Il Nostro Menu</h2>
+            <div class="menu-categories">
+                
+                <!-- Colazione -->
+                <div class="menu-category">
+                    <h3 class="category-title">Colazione</h3>
+                    <div class="category-banner">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1761156235/pplx_project_search_images/6b206141ee757b2d6d1a11510f45c908015b1354.png" alt="Cornetti freschi" class="banner-image">
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156235/pplx_project_search_images/6b206141ee757b2d6d1a11510f45c908015b1354.png" alt="Cornetti classici" class="item-image">
+                            <div class="item-name">Cornetti classici</div>
+                            <div class="item-description">Fragranti cornetti appena sfornati</div>
+                            <div class="item-price">€1.50</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156235/pplx_project_search_images/4aa95925d1b41a1b6324c95f395ce2723fe64c42.png" alt="Cornetti alla crema" class="item-image">
+                            <div class="item-name">Cornetti alla crema</div>
+                            <div class="item-description">Ripieni di crema pasticcera artigianale</div>
+                            <div class="item-price">€1.80</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156236/pplx_project_search_images/f8d83a970628c4a5247aa014eaa5628e1b119c9e.png" alt="Cornetti al cioccolato" class="item-image">
+                            <div class="item-name">Cornetti al cioccolato</div>
+                            <div class="item-description">Con cioccolato fondente di qualità</div>
+                            <div class="item-price">€1.80</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Brioche siciliana" class="item-image">
+                            <div class="item-name">Brioche siciliana con gelato</div>
+                            <div class="item-description">Tradizione siciliana autentica</div>
+                            <div class="item-price">€3.50</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Sfogliatella riccia" class="item-image">
+                            <div class="item-name">Sfogliatella riccia</div>
+                            <div class="item-description">Croccante e ripiena di ricotta</div>
+                            <div class="item-price">€2.00</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Sfogliatella frolla" class="item-image">
+                            <div class="item-name">Sfogliatella frolla</div>
+                            <div class="item-description">Morbida pasta frolla napoletana</div>
+                            <div class="item-price">€2.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Torte -->
+                <div class="menu-category">
+                    <h3 class="category-title">Torte</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1755942128/pplx_project_search_images/afdc280cc982503209623bfa09fbcdcddc71ffa3.png" alt="Torta millefoglie" class="item-image">
+                            <div class="item-name">Torta millefoglie</div>
+                            <div class="item-description">Strati di pasta sfoglia e crema chantilly</div>
+                            <div class="item-price">€25.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Torta Sacher" class="item-image">
+                            <div class="item-name">Torta Sacher</div>
+                            <div class="item-description">Cioccolato viennese con marmellata</div>
+                            <div class="item-price">€28.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c" alt="Cheesecake ai frutti di bosco" class="item-image">
+                            <div class="item-name">Cheesecake ai frutti di bosco</div>
+                            <div class="item-description">Cremosa con frutti freschi</div>
+                            <div class="item-price">€30.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156255/pplx_project_search_images/659d400a1a5937f67ea8db81952bcda399a337dc.png" alt="Tiramisù classico" class="item-image">
+                            <div class="item-name">Tiramisù classico</div>
+                            <div class="item-description">Ricetta tradizionale con mascarpone</div>
+                            <div class="item-price">€26.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Torta caprese" class="item-image">
+                            <div class="item-name">Torta caprese al cioccolato</div>
+                            <div class="item-description">Senza farina, con mandorle</div>
+                            <div class="item-price">€27.00/kg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasticcini -->
+                <div class="menu-category">
+                    <h3 class="category-title">Pasticcini</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754742487/pplx_project_search_images/f5b8354117f4becf335299c8473d0b3feb808058.png" alt="Cannoli siciliani" class="item-image">
+                            <div class="item-name">Cannoli siciliani</div>
+                            <div class="item-description">Cialda croccante e ricotta fresca</div>
+                            <div class="item-price">€2.50 cad</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156255/pplx_project_search_images/bbd61ba53e78878a076d5023849343c2c44c69b9.png" alt="Bignè alla crema" class="item-image">
+                            <div class="item-name">Bignè alla crema</div>
+                            <div class="item-description">Soffici bignè con crema pasticcera</div>
+                            <div class="item-price">€1.80 cad</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Babà al rum" class="item-image">
+                            <div class="item-name">Babà al rum</div>
+                            <div class="item-description">Imbevuti nel nostro sciroppo speciale</div>
+                            <div class="item-price">€2.00 cad</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Éclair al cioccolato" class="item-image">
+                            <div class="item-name">Éclair al cioccolato</div>
+                            <div class="item-description">Glassa al cioccolato fondente</div>
+                            <div class="item-price">€2.50 cad</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Pastiera napoletana" class="item-image">
+                            <div class="item-name">Pastiera napoletana</div>
+                            <div class="item-description">Specialità pasquale tutto l'anno</div>
+                            <div class="item-price">€3.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biscotti -->
+                <div class="menu-category">
+                    <h3 class="category-title">Biscotti</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Biscotti al burro" class="item-image">
+                            <div class="item-name">Biscotti al burro</div>
+                            <div class="item-description">Friabili e profumati</div>
+                            <div class="item-price">€12.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Cantuccini toscani" class="item-image">
+                            <div class="item-name">Cantuccini toscani</div>
+                            <div class="item-description">Perfetti con il vin santo</div>
+                            <div class="item-price">€14.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156254/pplx_project_search_images/5bf7b6a75bfcb5886acf61ac2b34cdd1c8e1cd1e.png" alt="Amaretti" class="item-image">
+                            <div class="item-name">Amaretti</div>
+                            <div class="item-description">Morbidi alle mandorle siciliane</div>
+                            <div class="item-price">€15.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Paste di mandorla" class="item-image">
+                            <div class="item-name">Paste di mandorla</div>
+                            <div class="item-description">Ricetta della nonna</div>
+                            <div class="item-price">€18.00/kg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialità Siciliane -->
+                <div class="menu-category">
+                    <h3 class="category-title">Specialità Siciliane</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1761156236/pplx_project_search_images/cfc98743b7de50f030dfdf460d9f4d696229c237.png" alt="Cassata siciliana" class="item-image">
+                            <div class="item-name">Cassata siciliana</div>
+                            <div class="item-description">La regina dei dolci siciliani</div>
+                            <div class="item-price">€32.00/kg</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754742487/pplx_project_search_images/f5b8354117f4becf335299c8473d0b3feb808058.png" alt="Cannolo gigante" class="item-image">
+                            <div class="item-name">Cannolo gigante</div>
+                            <div class="item-description">Ripieno al momento</div>
+                            <div class="item-price">€8.00</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Pasta di mandorle" class="item-image">
+                            <div class="item-name">Pasta di mandorle</div>
+                            <div class="item-description">Colorata e profumata</div>
+                            <div class="item-price">€2.00 cad</div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Frutta Martorana" class="item-image">
+                            <div class="item-name">Frutta Martorana</div>
+                            <div class="item-description">Arte pasticcera siciliana</div>
+                            <div class="item-price">€2.50 cad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Cosa Dicono i Nostri Clienti</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"I cannoli sono semplicemente divini! La ricotta è freschissima e la cialda croccante. Non ho mai mangiato cannoli così buoni."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="author-name">Maria Russo</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"La torta per il mio matrimonio è stata spettacolare. Tutti gli invitati hanno fatto i complimenti. Professionalità e qualità eccezionali."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="author-name">Giuseppe Marino</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"Ogni mattina passo a prendere i cornetti per la colazione. Sono sempre caldi e profumati. Un'istituzione a Messina!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="author-name">Antonella Costa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="section instagram-feed">
+        <div class="container">
+            <h2 class="section-title">Seguici su Instagram</h2>
+            <p class="instagram-subtitle">@pasticceriadolcevita</p>
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Instagram post" class="instagram-image">
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Instagram post" class="instagram-image">
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c" alt="Instagram post" class="instagram-image">
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35" alt="Instagram post" class="instagram-image">
+                </div>
+                <div class="instagram-item">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1754742487/pplx_project_search_images/f5b8354117f4becf335299c8473d0b3feb808058.png" alt="Instagram post" class="instagram-image">
+                </div>
+                <div class="instagram-item">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1761156254/pplx_project_search_images/5bf7b6a75bfcb5886acf61ac2b34cdd1c8e1cd1e.png" alt="Instagram post" class="instagram-image">
+                </div>
+            </div>
+            <div class="instagram-cta">
+                <a href="https://instagram.com/pasticceriadolcevita" class="btn btn--primary" target="_blank">Seguici su Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contatti">
+        <div class="container">
+            <h2 class="section-title">Contatti &amp; Orari</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Dove Siamo</h3>
+                    <div class="contact-info">
+                        Via Roma 123, Messina<br>
+                        Sicilia, Italia
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Orari di Apertura</h3>
+                    <div class="contact-info">
+                        Lun-Sab: 7:00-20:00<br>
+                        Dom: 7:00-14:00
+                    </div>
+                </div>
+                
+                <div class="contact-info-simple">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span><a href="tel:+39090123456" style="color: var(--color-text); text-decoration: none;">+39 090 123456</a></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span><a href="mailto:info@pasticceriadolcevita.it" style="color: var(--color-text); text-decoration: none;">info@pasticceriadolcevita.it</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pasticceria Dolce Vita</h3>
+                <p>Tradizione artigianale dal 1985</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <ul class="footer-links">
+                    <li><a href="#menu">Colazione</a></li>
+                    <li><a href="#menu">Torte</a></li>
+                    <li><a href="#menu">Pasticcini</a></li>
+                    <li><a href="#menu">Biscotti</a></li>
+                    <li><a href="#menu">Specialità Siciliane</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Informazioni</h3>
+                <ul class="footer-links">
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#contatti">Dove Siamo</a></li>
+                    <li><a href="#contatti">Orari</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Pasticceria Dolce Vita - Tutti i diritti riservati</p>
+            <p style="margin-top: 8px; font-size: 11px;">Per informazioni su allergeni, contattaci</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5"/>
+            <path d="M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add animation on scroll for menu items
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe menu items for scroll animation
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+
+        // Add hover sound effect simulation (visual feedback)
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Welcome section fade in animation
+        const welcomeSection = document.querySelector('.welcome');
+        const welcomeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (welcomeSection) {
+            welcomeSection.style.opacity = '0';
+            welcomeSection.style.transform = 'translateY(30px)';
+            welcomeSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            welcomeObserver.observe(welcomeSection);
+        }
+    </script>
+</body>
+</html>
